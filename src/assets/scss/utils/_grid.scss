@@ -1,0 +1,10 @@
+@use '../abstract' as a;
+
+.grid-bleed {
+  display: grid;
+  grid-template-columns: 1fr min(120rem, 100% - (2 * 1.5rem)) 1fr;
+  
+  @include a.breakpoint(medium) {
+    grid-template-columns: 1fr min(120rem, 100% - (2 * 10rem)) 1fr;
+  }
+}

@@ -1,0 +1,74 @@
+@use '../abstract' as a;
+
+.hero {
+  grid-area: 1/1 / 1/4;
+  color: a.$clr--white;
+  background-color: a.$clr--dark-violet;
+  
+  @include a.breakpoint(medium) {
+    grid-template-columns: 1fr repeat(2, calc((min(100% - (10rem * 2), 120rem))/ 2) ) 1fr;
+    margin-bottom: 7rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: url('./images/bg-pattern-intro-right-desktop.svg') no-repeat top -4.5rem right,
+                  url('./images/bg-pattern-intro-left-desktop.svg') no-repeat center left;
+      background-size: min(30%, 35rem),
+                      min(12.5%, 14rem);
+    }
+  }
+  
+
+  &__images {
+    width: 100%;
+    grid-area: 1/1 / 1/4;
+    
+    & > *{
+      width: 100%;
+    }
+
+    @include a.breakpoint(medium) {
+      grid-area: 1/3;
+      position: relative;
+      top: 7rem;
+    }
+  }
+
+  &__text {
+    grid-area: 2/1 / 2/4;
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+    padding: 5.75rem 1.5rem;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 150%;
+      z-index: 1;
+      background: url('./images/bg-pattern-intro-right-mobile.svg') no-repeat bottom right,
+      url('./images/bg-pattern-intro-left-mobile.svg') no-repeat top left;
+    }
+    
+    @include a.breakpoint(medium) {
+      grid-area: 1/2;
+      justify-items: flex-start;
+      align-content: center;
+      text-align: left;
+      padding-right: 2rem;
+      background: none;
+      
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

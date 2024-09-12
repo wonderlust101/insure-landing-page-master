@@ -1,0 +1,48 @@
+@use '../abstract' as a;
+
+.features {
+  grid-area: 2/2;
+  display: grid;
+  justify-items: center;
+  gap: 5rem;
+  
+  @include a.breakpoint(medium) {
+    justify-items: flex-start;
+    gap: 6rem;
+  }
+  
+  &__feature-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    
+    @include a.breakpoint(medium) {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+  
+  &__feature {
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+    
+    @include a.breakpoint(medium) {
+      justify-items: flex-start;
+    }
+  }
+
+  &__feature-text {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+
+    @include a.breakpoint(medium) {
+      text-align: left;
+    }
+  }
+  
+  &__feature-body-text {
+    color: a.$clr--grayish-blue;
+  }
+}

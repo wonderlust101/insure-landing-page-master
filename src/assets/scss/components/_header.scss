@@ -1,0 +1,129 @@
+@use '../abstract' as a;
+
+.header {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  align-content: flex-start;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+
+  @include a.breakpoint(medium) {
+    grid-template-columns: 1fr min(120rem, 100% - (2 * 10rem)) 1fr;
+    background-color: a.$clr--white;
+    height: unset;
+  }
+
+  &__logo-container {
+    grid-area: 1/ 1 / 1/4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
+    background-color: a.$clr--white;
+
+    @include a.breakpoint(medium) {
+      grid-area: 1/ 2 / 1/3;
+      background-color: unset;
+    }
+  }
+  
+  &__burger-menu {
+    
+    @include a.breakpoint(medium) {
+      display: none;
+    }
+  }
+
+  &__navigation-container {
+    grid-area: 2/ 1 / 2/4;
+    height: 100%;
+    width: 100%;
+
+    background: url('./images/bg-pattern-mobile-nav.svg') no-repeat bottom a.$clr--very-dark-violet;
+    background-size: contain;
+
+    @include a.breakpoint(medium) {
+      grid-area: 1/ 2 / 1/3;
+      background: unset;
+      width: max-content;
+      height: unset;
+      justify-self: flex-end;
+      align-self: center;
+    }
+    
+    &--hidden {
+      display: none;
+      
+      @include a.breakpoint(medium) {
+        display: block;
+      }
+    }
+  }
+
+  &__navigation {
+    display: grid;
+    justify-items: center;
+    gap: 3rem;
+    padding-top: 3rem;
+
+    @include a.breakpoint(medium) {
+      color: a.$clr--dark-grayish-violet;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding-top: unset;
+    }
+  }
+
+  &__navigation-link {
+    & > * {
+      font-size: 1.5rem;
+      color: a.$clr--white;
+      
+      @include a.breakpoint(medium) {
+        color: a.$clr--dark-grayish-violet;
+        font-size: 0.9rem;
+      }
+
+      &:hover {
+        color: a.$clr--dark-violet;
+      }
+    }
+  }
+
+  &__button {
+    width: min(calc(100% - 1.5rem * 2), 25rem);
+    padding: 1rem 1.75rem;
+    color: a.$clr--white;
+    border: 2px solid a.$clr--white;
+    
+    @include a.breakpoint(medium) {
+      width: unset;
+      padding: 0.8rem 1.75rem;
+      color: a.$clr--dark-violet;
+      border: 2px solid a.$clr--dark-violet;
+    }
+    
+    & > * {
+      font-size: 1.25rem;
+      
+      @include a.breakpoint(medium) {
+        font-size: 0.8125rem;
+      }
+    }
+
+    &:hover {
+      color: a.$clr--dark-violet;
+      background-color: a.$clr--white;
+      
+      @include a.breakpoint(medium) {
+        color: a.$clr--white;
+        background-color: a.$clr--dark-violet;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,28 @@
+@use '../abstract' as a;
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  padding: 0.8rem 1.75rem;
+  font-weight: 700;
+  
+  &--black {
+    color: a.$clr--dark-violet;
+    border: 2px solid a.$clr--dark-violet;
+    
+    &:hover {
+      color: a.$clr--white;
+      background-color: a.$clr--dark-violet;
+    }
+  }
+
+  &--white {
+    color: a.$clr--white;
+    border: 2px solid a.$clr--white;
+
+    &:hover {
+      color: a.$clr--dark-violet;
+      background-color: a.$clr--white;
+    }
+  }
+}

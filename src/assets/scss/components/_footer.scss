@@ -1,0 +1,84 @@
+@use '../abstract' as a;
+
+.footer {
+  padding: 5.5rem 0;
+  background: url('./images/bg-pattern-footer-mobile.svg') no-repeat top a.$clr--very-light-gray;
+  background-size: 100%;
+
+  @include a.breakpoint(medium) {
+    background: url('./images/bg-pattern-footer-desktop.svg') no-repeat top left a.$clr--very-light-gray;
+  }
+  
+  &__content {
+    grid-area: 1/2;
+    display: grid;
+    justify-items: center;
+    gap: 2.5rem;
+  }
+
+  &__section {
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+
+    @include a.breakpoint(medium) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__divider {
+    width: 100%;
+    background-color: a.$clr--grayish-blue;
+  }
+
+  &__socials-flex {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__links {
+    display: grid;
+    gap: 2.5rem;
+    text-align: center;
+
+    @include a.breakpoint(medium) {
+      grid-template-columns: repeat(4, 1fr);
+      align-items: flex-start;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  &__link-section {
+    display: grid;
+    gap: 2.25rem;
+
+  }
+
+  &__link-header {
+    font-family: 'Karla', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.09375rem;
+    text-transform: uppercase;
+    color: a.$clr--grayish-blue;
+  }
+
+  &__sublink-section {
+    display: grid;
+    gap: 1rem;
+  }
+
+  &__sublink {
+    width: max-content;
+    letter-spacing: 0.09375rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

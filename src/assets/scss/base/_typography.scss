@@ -1,0 +1,51 @@
+@use '../abstract' as a;
+
+h1, h2, h3, h4,
+h5, h6 {
+  font-family: 'DM Serif Display', serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.04169rem;
+  
+  @include a.breakpoint(medium) {
+    font-size: 4.5rem;
+  }
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.04169rem;
+
+  @include a.breakpoint(medium) {
+    font-size: 4.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: -0.02431rem;
+}
+
+p, a {
+  font-family: 'Karla', serif;
+}
+
+p {
+  line-height: 1.7;
+}
+
+a {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.09375rem;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+}
