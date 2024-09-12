@@ -1,0 +1,78 @@
+[
+  {
+    "header": "Our Company",
+    "links": [
+      {
+        "location": "How We Work",
+        "link": "#"
+      },
+      {
+        "location": "Why Insure?",
+        "link": "#"
+      },
+      {
+        "location": "View Plans",
+        "link": "#"
+      },
+      {
+        "location": "Reviews",
+        "link": "#"
+      }
+    ]
+  },
+  {
+    "header": "Help Me",
+    "links": [
+      {
+        "location": "FAQ",
+        "link": "#"
+      },
+      {
+        "location": "Terms of Use",
+        "link": "#"
+      },
+      {
+        "location": "Privacy Policy",
+        "link": "#"
+      },
+      {
+        "location": "Cookies",
+        "link": "#"
+      }
+    ]
+  },
+  {
+    "header": "Contact",
+    "links": [
+      {
+        "location": "Sales",
+        "link": "#"
+      },
+      {
+        "location": "Support",
+        "link": "#"
+      },
+      {
+        "location": "Live Chat",
+        "link": "#"
+      }
+    ]
+  },
+  {
+    "header": "Others",
+    "links": [
+      {
+        "location": "Careers",
+        "link": "#"
+      },
+      {
+        "location": "Press",
+        "link": "#"
+      },
+      {
+        "location": "Licenses",
+        "link": "#"
+      }
+    ]
+  }
+]

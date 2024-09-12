@@ -17,7 +17,7 @@ export default function FooterSocials({socials} :FooterSocialsProps) {
                 {socials.map((social) => (
                     <li key={social.name}>
                         <a href={social.link} aria-label={'Go to Insure ' + social.name + ' page'}>
-                            <img src={social.icon} alt=""/>
+                            <img src={social.icon} alt="" role='presentation'/>
                         </a>
                     </li>
                 ))}

@@ -1,20 +1,12 @@
-const features = [
-    {
-        images: '/src/assets/images/icon-snappy-process.svg',
-        title: 'Snappy Process',
-        bodyText: 'Our application process can be completed in minutes, not hours. Don’t get stuck filling in tedious forms.',
-    },
-    {
-        images: '/src/assets/images/icon-affordable-prices.svg',
-        title: 'Affordable Prices',
-        bodyText: 'We don’t want you worrying about high monthly costs. Our prices may be low, but we still offer the best coverage possible.',
-    },
-    {
-        images: '/src/assets/images/icon-people-first.svg',
-        title: 'People First',
-        bodyText: 'Our plans aren’t full of conditions and clauses to prevent payouts. We make sure you’re covered when you need it.',
-    },
-]
+import featuresList from '/src/data/features.json';
+
+interface Feature {
+    title: string;
+    images: string;
+    bodyText: string;
+}
+
+const features: Feature[] = featuresList;
 
 export default function Features() {
 
