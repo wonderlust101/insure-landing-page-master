@@ -15,8 +15,8 @@
       width: 100%;
       height: 100%;
       z-index: 1;
-      background: url('./images/bg-pattern-intro-right-desktop.svg') no-repeat top -4.5rem right,
-                  url('./images/bg-pattern-intro-left-desktop.svg') no-repeat center left;
+      background: url('/images/bg-pattern-intro-right-desktop.svg') no-repeat top -4.5rem right,
+                  url('/images/bg-pattern-intro-left-desktop.svg') no-repeat center left;
       background-size: min(30%, 35rem),
                       min(12.5%, 14rem);
     }
@@ -54,8 +54,8 @@
       width: 100%;
       height: 150%;
       z-index: 1;
-      background: url('./images/bg-pattern-intro-right-mobile.svg') no-repeat bottom right,
-      url('./images/bg-pattern-intro-left-mobile.svg') no-repeat top left;
+      background: url('/images/bg-pattern-intro-right-mobile.svg') no-repeat bottom right,
+      url('/images/bg-pattern-intro-left-mobile.svg') no-repeat top left;
     }
     
     @include a.breakpoint(medium) {

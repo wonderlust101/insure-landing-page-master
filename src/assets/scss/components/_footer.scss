@@ -2,11 +2,11 @@
 
 .footer {
   padding: 5.5rem 0;
-  background: url('./images/bg-pattern-footer-mobile.svg') no-repeat top a.$clr--very-light-gray;
+  background: url('/images/bg-pattern-footer-mobile.svg') no-repeat top a.$clr--very-light-gray;
   background-size: 100%;
 
   @include a.breakpoint(medium) {
-    background: url('./images/bg-pattern-footer-desktop.svg') no-repeat top left a.$clr--very-light-gray;
+    background: url('/images/bg-pattern-footer-desktop.svg') no-repeat top left a.$clr--very-light-gray;
   }
   
   &__content {

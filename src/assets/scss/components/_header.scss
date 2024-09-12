@@ -42,7 +42,7 @@
     height: 100%;
     width: 100%;
 
-    background: url('./images/bg-pattern-mobile-nav.svg') no-repeat bottom a.$clr--very-dark-violet;
+    background: url('/images/bg-pattern-mobile-nav.svg') no-repeat bottom a.$clr--very-dark-violet;
     background-size: contain;
 
     @include a.breakpoint(medium) {
