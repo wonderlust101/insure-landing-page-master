@@ -56,7 +56,6 @@
   &__link-section {
     display: grid;
     gap: 2.25rem;
-
   }
 
   &__link-header {
@@ -70,13 +69,18 @@
 
   &__sublink-section {
     display: grid;
+    justify-items: center;
     gap: 1rem;
+    
+    @include a.breakpoint(medium) {
+      justify-items: flex-start;
+    }
   }
 
   &__sublink {
     width: max-content;
     letter-spacing: 0.09375rem;
-
+    
     &:hover {
       text-decoration: underline;
     }
