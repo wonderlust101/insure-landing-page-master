@@ -4,7 +4,6 @@
   display: grid;
   grid-template-rows: max-content 1fr;
   align-content: flex-start;
-  align-items: center;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -12,6 +11,7 @@
 
   @include a.breakpoint(medium) {
     grid-template-columns: 1fr min(120rem, 100% - (2 * 10rem)) 1fr;
+    align-items: center;
     background-color: a.$clr--white;
     height: unset;
   }
@@ -41,9 +41,10 @@
     grid-area: 2/ 1 / 2/4;
     height: 100%;
     width: 100%;
-
     background: url('/images/bg-pattern-mobile-nav.svg') no-repeat bottom a.$clr--very-dark-violet;
     background-size: contain;
+    transition: all 0.5s;
+    overflow: hidden;
 
     @include a.breakpoint(medium) {
       grid-area: 1/ 2 / 1/3;
@@ -55,10 +56,10 @@
     }
     
     &--hidden {
-      display: none;
+      height: 0;
       
       @include a.breakpoint(medium) {
-        display: block;
+        height: unset;
       }
     }
   }
